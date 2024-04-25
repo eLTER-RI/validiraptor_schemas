@@ -2,7 +2,7 @@
     "$id": "https://velociraptor.example/shared",
     "definitions": {
 	"ABS_POSITION": {
-	    "description": "Absolute 3D coordinates [decimal number] expressed in decimal degree [dec °] WGS84 using at least 6-digits after the decimal separator of a single observation within the site or station. When a specific location is available in the dataset record (e.g. if the STATION is an area and many observations/records are available within that area, the absolute position is that of the single record).\nCondition 1: if a ABSOLUTE_POSITION is provided the STATION normally is left empty.\nCondition 2: if an ABSOLUTE POSITION is provided the HORIZONTAL OFFSET is left blank.",
+	    "description": "Absolute 3D coordinates [decimal number] expressed in decimal degree  WGS84 using at least 6-digits after the decimal separator of a single observation within the site or station. When a specific location is available in the dataset record (e.g. if the STATION is an area and many observations/records are available within that area, the absolute position is that of the single record).\nCondition 1: if a ABSOLUTE_POSITION is provided the STATION normally is left empty.\nCondition 2: if an ABSOLUTE POSITION is provided the HORIZONTAL OFFSET is left blank.",
 	    "type": "string",
 	    "$comment": "in regular expression, make sure to escape with double backshlash!",
 	    "pattern": "/^([0-9]+(\\.[0-9])?[, ]+){2}([0-9](\\.[0-9]+)?)+$"
@@ -11,7 +11,7 @@
 	    "type": "number"
 	},
 	"BBOXCORNER": {
-	    "description": "bounding box [decimal number] for a station in decimal degree [dec °] WGS84; if a point is represented east and west bounding coordinates are equal",
+	    "description": "bounding box [decimal number] for a station in decimal degree  WGS84; if a point is represented east and west bounding coordinates are equal",
 	    "type": "number"
 	},
 	"CODE": {
@@ -63,7 +63,7 @@
 	    "examples": ["\"A\" (Minimum)", "\"Z\" (Maximum)", "\"S\" (Sum)", "\"X\" (Arithmetic average, mean; e.g. monthly average)", "\"W\" (Weighted mean)", "\"XA\" (average monthly minimum)", "\"XZ\" (average monthly maximum)", "\"SZ\" (maximum daily sum)", "\"M\" (Mode)"]
 	},
 	"GEOSPAT_FEATURE": {
-	    "description": "Geospatial feature [UTF-8 character encoding or URL/URI] is the (computable) geospatial representation. It could also be a WKT, a URI pointing to an online resource (WFS feature, GeoJson, …), or at least a textual description identifying the geometry/spatial feature (like in the case of rivers, roads, trails, toponyms, etc.)",
+	    "description": "Geospatial feature [UTF-8 character encoding or URL/URI] is the (computable) geospatial representation. It could also be a WKT, a URI pointing to an online resource (WFS feature, GeoJson, etc.), or at least a textual description identifying the geometry/spatial feature (like in the case of rivers, roads, trails, toponyms, etc.)",
 	    "type": "string"
 	},
 	"HABITAT_TYPE": {
@@ -85,7 +85,7 @@
 	    "type": "string"
 	},
 	"LIST_CODE": {
-	    "description": "Name or reference [URL] of the code list; if referring to an existing code list the name of the code list is provided (e.g. DB, EnvThes). If the code is defined by the user, use ‘ADD’ as identification",
+	    "description": "Name or reference [URL] of the code list; if referring to an existing code list the name of the code list is provided (e.g. DB, EnvThes). If the code is defined by the user, use \"ADD\" as identification",
 	    "type": "string"
 	},
 	"LON": {
@@ -95,7 +95,7 @@
 	    "maximum": 180
 	},
 	"MEDIUM": {
-	    "description": "Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.\\rExample: Sampled medium [UTF-8 character encoding] – as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.",
+	    "description": "Sampled medium [UTF-8 character encoding]  as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.\\rExample: Sampled medium [UTF-8 character encoding]  as the code for the sampled medium in the observation procedure\nAIR air including meteorology\nSOIL soil\nSOILWAT soil water\nWATER runoff and groundwater\nSEDIMENT sediments in aquatic environments\nLITTER litter fall\nBIOCOM biological communities\nHUMPOP human population\nSITECHAR site characteristics (as habitat or landscape structure)\nAdditional values need to be defined in the REFERENCE.",
 	    "type": "string"
 	},
 	"METH_DESCR": {
@@ -169,7 +169,7 @@
 	    "type": "string"
 	},
 	"VALUE": {
-	    "description": "i) Data value [[UTF-8 character encoding] or ii) number of the observation. The comma separator needs to be consistently used in the data file either being ‘,’ or ‘.’",
+	    "description": "i) Data value [[UTF-8 character encoding] or ii) number of the observation. The comma separator needs to be consistently used in the data file either being \",\" or \".\"",
 	    "type": "string"
 	},
 	"VARIABLE": {
